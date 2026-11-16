@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Painel do Escritório</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%235b4bdb'/><text x='50' y='68' font-size='52' text-anchor='middle' fill='white' font-family='Arial'>P</text></svg>">
+</head>
+<body>
+<aside class="sidebar">
+  <div class="brand"><span class="logo">P</span><div><strong id="brandName">Painel do Escritório</strong><small>versão preliminar</small></div></div>
+  <nav>
+    <button data-view="inicio" class="active">🏠 Início</button>
+    <button data-view="projetos">📋 Projetos</button>
+    <button data-view="financeiro">💰 Financeiro</button>
+    <button data-view="instagram">📸 Instagram</button>
+    <button data-view="midia">🎞️ Mídia</button>
+    <button data-view="config">⚙️ Configurações</button>
+  </nav>
+  <p class="hint">Os dados ficam guardados neste navegador. Use <b>Configurações → Exportar</b> para fazer cópia de segurança.</p>
+</aside>
+
+<main>
+  <header class="topbar">
+    <button id="menuBtn" class="menu-btn" aria-label="Menu">☰</button>
+    <h1 id="viewTitle">Início</h1>
+    <div id="viewActions"></div>
+  </header>
+  <section id="view"></section>
+</main>
+
+<dialog id="modal">
+  <form method="dialog" id="modalForm">
+    <h2 id="modalTitle"></h2>
+    <div id="modalBody"></div>
+    <div class="modal-actions">
+      <button type="button" class="danger" id="modalDelete" hidden>Excluir</button>
+      <span class="spacer"></span>
+      <button value="cancel" formnovalidate class="ghost">Cancelar</button>
+      <button value="ok" class="primary">Salvar</button>
+    </div>
+  </form>
+</dialog>
+
+<script src="app.js"></script>
+</body>
+</html>
